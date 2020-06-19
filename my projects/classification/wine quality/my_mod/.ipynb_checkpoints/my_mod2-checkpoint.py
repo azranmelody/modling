@@ -1,0 +1,2 @@
+def ggg():
+    print('gggggggg')
