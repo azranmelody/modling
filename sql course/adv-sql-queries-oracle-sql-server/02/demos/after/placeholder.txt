@@ -1,0 +1,104 @@
+/* Course Data */
+/* Table: CHILDSTAT */
+/* Database: Oracle */
+FIRSTNAME  GENDER BIRTHDATE  HEIGHT  WEIGHT  
+---------  ------ ---------  ------  ------
+LAUREN     F      10-JUN-00  54      876     
+ROSEMARY   F      08-MAY-00  35      123     
+ALBERT     M      02-AUG-00  45      150     
+BUDDY      M      02-OCT-98  45      189     
+FARQUAR    M      05-NOV-98  76      198     
+SIMON      M      03-JAN-99  87      256     
+TOMMY      M      11-DEC-98  78      167 
+
+/* Course Data */
+/* Table: CHILDSTAT */
+/* Database: SQL Server */
+FIRSTNAME  GENDER BIRTHDATE  HEIGHT  WEIGHT  
+---------  ------ ---------  ------  ------
+LAUREN     F      10-JUN-00  54      876     
+ROSEMARY   F      08-MAY-00  35      123     
+ALBERT     M      02-AUG-00  45      150     
+BUDDY      M      02-OCT-98  45      189     
+FARQUAR    M      05-NOV-98  76      198     
+SIMON      M      03-JAN-99  87      256     
+TOMMY      M      11-DEC-98  78      167 
+
+/* Example #7 */
+FIRSTNAME  GENDER BIRTHDATE  HEIGHT  WEIGHT  RNUM  
+---------  ------ ---------  ------  ------  ----
+ALBERT     M      02-AUG-00  45      150     1     
+BUDDY      M      02-OCT-98  45      189     2     
+FARQUAR    M      05-NOV-98  76      198     3     
+LAUREN     F      10-JUN-00  54      876     4     
+ROSEMARY   F      08-MAY-00  35      123     5     
+SIMON      M      03-JAN-99  87      256     6     
+TOMMY      M      11-DEC-98  78      167     7 
+
+/* Example #8 */
+FIRSTNAME  GENDER BIRTHDATE  HEIGHT  WEIGHT  RNUM  
+---------  ------ ---------  ------  ------  ----
+LAUREN     F      10-JUN-00  54      876     1     
+ROSEMARY   F      08-MAY-00  35      123     2     
+ALBERT     M      02-AUG-00  45      150     1     
+BUDDY      M      02-OCT-98  45      189     2     
+FARQUAR    M      05-NOV-98  76      198     3     
+SIMON      M      03-JAN-99  87      256     4     
+TOMMY      M      11-DEC-98  78      167     5 
+
+/* Example #9 */
+FIRSTNAME GENDER HEIGHT  WEIGHT  NAMELIST                             
+--------- ------ ------  ------  ------------------------------------
+LAUREN    F      54      876     LAUREN, ROSEMARY                       
+ROSEMARY  F      35      123     LAUREN, ROSEMARY                       
+SIMON     M      87      256     SIMON, FARQUAR, BUDDY, TOMMY, ALBERT   
+FARQUAR   M      76      198     SIMON, FARQUAR, BUDDY, TOMMY, ALBERT   
+BUDDY     M      45      189     SIMON, FARQUAR, BUDDY, TOMMY, ALBERT   
+TOMMY     M      78      167     SIMON, FARQUAR, BUDDY, TOMMY, ALBERT   
+ALBERT    M      45      150     SIMON, FARQUAR, BUDDY, TOMMY, ALBERT 
+
+
+/* Example #10*/
+FIRSTNAME WEIGHT  LEAD_1_WT  LAG_2_WT  
+--------- ------  ---------  --------
+ROSEMARY  123     150        -1        
+ALBERT    150     167        -1        
+TOMMY     167     189        123       
+BUDDY     189     198        150       
+FARQUAR   198     256        167       
+SIMON     256     876        189       
+LAUREN    876     -1         198 
+
+/* Example #11*/
+FIRSTNAME GENDER WEIGHT  LEAD_1_WT LAG_2_WT
+--------- ------ ------  --------- --------
+ROSEMARY  F      123     876	   -1      
+LAUREN    F      876     -1	   -1      
+ALBERT    M      150     167	   -1      
+TOMMY     M      167     189	   -1      
+BUDDY     M      189     198	   150     
+FARQUAR   M      198     256	   167     
+SIMON     M      256     -1	   189
+
+/* Example #12*/
+FIRSTNAME GENDER HEIGHT HT_RANK HT_DENSERANK
+--------- ------ ------ ------- ------------
+ROSEMARY  F      35     1	1           
+LAUREN    F      54     2	2           
+ALBERT    M      45     1	1           
+BUDDY     M      45     1	1           
+FARQUAR   M      76     3	2           
+TOMMY     M      78     4	3           
+SIMON     M      87     5	4
+
+/* Example #13*/
+FIRSTNAME GENDER WEIGHT  LT_CHILD  HV_CHILD
+--------- ------ ------  --------  --------
+ROSEMARY  F      123     ROSEMARY  ROSEMARY
+LAUREN    F      876     ROSEMARY  LAUREN  
+ALBERT    M      150     ALBERT	   ALBERT  
+TOMMY     M      167     ALBERT	   TOMMY   
+BUDDY     M      189     ALBERT	   BUDDY   
+FARQUAR   M      198     ALBERT	   FARQUAR 
+SIMON     M      256     ALBERT	   SIMON 
+

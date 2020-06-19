@@ -1,0 +1,164 @@
+/* Course Data */
+/* Table: CANDYBAR_CONSUMPTION_DATA */
+/* Database: Oracle */
+SURVEY_YEAR CANDYBAR_NAME GENDER OVERALL_RATING TOTAL_BARS_CONSUMED    
+----------- ------------- ------ -------------- ---------------------- 
+2009        TWIX BAR      F      7              20                     
+2009        MARS BAR      F      7              25                     
+2011        HERSHEY BAR   F      5              1                      
+2009        HERSHEY BAR   F      7              20                     
+2009        SNICKERS BAR  M      8              55                     
+2011        MARS BAR      M      10             452                    
+2009        TWIX BAR      M      10             6                      
+2009        MARS BAR      F      8              25                     
+2011        SNICKERS BAR  M      8              75                     
+2009        TWIX BAR      M      9              75                     
+2010        HERSHEY BAR   M      8              15                     
+2010        TWIX BAR      M      7              60                     
+2009        HERSHEY BAR   F      5              2                      
+2010        HERSHEY BAR   F      5              3                      
+2010        MARS BAR      M      7              12                     
+2011        MARS BAR      M      8              13                     
+2010        HERSHEY BAR   F      7              30                     
+2011        TWIX BAR      F      7              10                     
+2011        HERSHEY BAR   M      6              5                      
+2010        MARS BAR      M      10             352                    
+2011        HERSHEY BAR   F      7              10                     
+2011        MARS BAR      F      7              15                     
+2010        TWIX BAR      M      9              85                     
+2010        MARS BAR      F      8              12                     
+2009        MARS BAR      M      10             252                    
+2011        TWIX BAR      M      8              600                    
+2011        MARS BAR      F      8              13                     
+2009        TWIX BAR      M      7              6                      
+2010        TWIX BAR      F      7              30                     
+2010        SNICKERS BAR  M      8              65                     
+2009        HERSHEY BAR   M      8              15                     
+2010        TWIX BAR      M      8              60                     
+2011        TWIX BAR      M      9              695                    
+2009        MARS BAR      M      8              25                     
+2010        MARS BAR      F      7              35   
+
+/* Course Data */
+/* Table: CANDYBAR_CONSUMPTION_DATA */
+/* Database: SQL Server */
+SURVEY_YEAR CANDYBAR_NAME GENDER OVERALL_RATING TOTAL_BARS_CONSUMED    
+----------- ------------- ------ -------------- ---------------------- 
+2009        TWIX BAR      F      7              20                     
+2009        MARS BAR      F      7              25                     
+2011        HERSHEY BAR   F      5              1                      
+2009        HERSHEY BAR   F      7              20                     
+2009        SNICKERS BAR  M      8              55                     
+2011        MARS BAR      M      10             452                    
+2009        TWIX BAR      M      10             6                      
+2009        MARS BAR      F      8              25                     
+2011        SNICKERS BAR  M      8              75                     
+2009        TWIX BAR      M      9              75                     
+2010        HERSHEY BAR   M      8              15                     
+2010        TWIX BAR      M      7              60                     
+2009        HERSHEY BAR   F      5              2                      
+2010        HERSHEY BAR   F      5              3                      
+2010        MARS BAR      M      7              12                     
+2011        MARS BAR      M      8              13                     
+2010        HERSHEY BAR   F      7              30                     
+2011        TWIX BAR      F      7              10                     
+2011        HERSHEY BAR   M      6              5                      
+2010        MARS BAR      M      10             352                    
+2011        HERSHEY BAR   F      7              10                     
+2011        MARS BAR      F      7              15                     
+2010        TWIX BAR      M      9              85                     
+2010        MARS BAR      F      8              12                     
+2009        MARS BAR      M      10             252                    
+2011        TWIX BAR      M      8              600                    
+2011        MARS BAR      F      8              13                     
+2009        TWIX BAR      M      7              6                      
+2010        TWIX BAR      F      7              30                     
+2010        SNICKERS BAR  M      8              65                     
+2009        HERSHEY BAR   M      8              15                     
+2010        TWIX BAR      M      8              60                     
+2011        TWIX BAR      M      9              695                    
+2009        MARS BAR      M      8              25                     
+2010        MARS BAR      F      7              35   
+
+/* Vintage Data Transposition */
+/* Turning Columns into Rows */
+CONSUMER_ID CANDYBAR_NAME SURVEY_YEAR GENDER STAT_TYPE STAT_VALUE 
+----------- ------------- ----------- ------ --------- ----------
+1           TWIX BAR      2009        M      1         10         
+1           TWIX BAR      2010        M      1         7          
+1           TWIX BAR      2011        M      1         8          
+1           TWIX BAR      2009        M      2         6          
+1           TWIX BAR      2010        M      2         60         
+1           TWIX BAR      2011        M      2         600 
+…snip…
+
+/* Turning Rows into Columns */
+CONSUMER_ID CANDYBAR_NAME SURVEY_YEAR GENDER OVERALL_RATING NBC 
+----------- ------------- ----------- ------ -------------- ---
+1           TWIX BAR      2009        M      10                                  
+1           TWIX BAR      2010        M      7                                   
+1           TWIX BAR      2011        M      8                                   
+1           TWIX BAR      2009        M                     6                    
+1           TWIX BAR      2010        M                     60                   
+1           TWIX BAR      2011        M                     600
+…snip…
+
+
+/* Modern Data Transposition */
+/* Turning Columns into Rows (UNPIVOT) */
+CONSUMER_ID CANDYBAR_NAME SURVEY_YEAR GENDER STAT_TYPE            STAT_VALUE 
+----------- ------------- ----------- ------ -------------------  ----------
+1           TWIX BAR      2009        M      OVERALL_RATING       10         
+1           TWIX BAR      2010        M      OVERALL_RATING       7          
+1           TWIX BAR      2011        M      OVERALL_RATING       8          
+1           TWIX BAR      2009        M      NUMBER_BARS_CONSUMED 6          
+1           TWIX BAR      2010        M      NUMBER_BARS_CONSUMED 60         
+1           TWIX BAR      2011        M      NUMBER_BARS_CONSUMED 600 
+…snip…
+
+
+/* Turning Rows into Columns (PIVOT) */
+CONSUMER_ID CANDYBAR_NAME SURVEY_YEAR GENDER 1   2     
+----------- ------------- ----------- ------ --- ---
+1           TWIX BAR      2009        M      10  6   
+1           TWIX BAR      2010        M      7   60  
+1           TWIX BAR      2011        M      8   600 
+…snip…
+
+CONSUMER_ID CANDYBAR_NAME SURVEY_YEAR GENDER 1_SUMSTAT 2_SUMSTAT 
+----------- ------------- ----------- ------ --------- ---------
+1           TWIX BAR      2009        M      10        6   
+1           TWIX BAR      2010        M      7         60  
+1           TWIX BAR      2011        M      8         600 
+…snip…
+
+CONSUMER_ID CANDYBAR_NAME SURVEY_YEAR GENDER OAR_SUMSTAT NBC_SUMSTAT 
+----------- ------------- ----------- ------ ----------- -----------
+1           TWIX BAR      2009        M      10          6   
+1           TWIX BAR      2010        M      7           60  
+1           TWIX BAR      2011        M      8           600 
+…snip…
+
+CONSUMER_ID CANDYBAR_NAME SURVEY_YEAR GENDER OAR_SM OAR_MN OAR_MX NBC_SM NBC_MN NBC_MX 
+----------- ------------- ----------- ------ ------ ------ ------ ------ ------ ------
+1           TWIX BAR      2009        M      10     10     10     6      6      6      
+1           TWIX BAR      2010        M      7      7      7      60     60     60     
+1           TWIX BAR      2011        M      8      8      8      600    600    600 
+…snip…
+
+/* Multi-Column PIVOT */
+CONSUMER_ID CANDYBAR_NAME GENDER Y2009_OAR Y2009_NBC Y2010_OAR Y2010_NBC Y2011_OAR Y2011_NBC 
+----------- ------------- ------ --------- --------- --------- --------- --------- ---------
+1           MARS BAR      M      10        252       10        352       10        452       
+1           TWIX BAR      M      10        6         7         60        8         600       
+2           HERSHEY BAR   F      5         2         5         3         5         1         
+2           MARS BAR      F      8         25        8         12        8         13        
+3           MARS BAR      M      8         25        7         12        8         13        
+3           TWIX BAR      M      7         6         8         60        9         600       
+4           HERSHEY BAR   F      7         20        7         30        7         10        
+4           MARS BAR      F      7         25        7         35        7         15        
+4           TWIX BAR      F      7         20        7         30        7         10        
+5           HERSHEY BAR   M      8         15        8         15        6         5         
+5           SNICKERS BAR  M      8         55        8         65        8         75        
+5           TWIX BAR      M      9         75        9         85        9         95 
+

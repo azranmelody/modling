@@ -1,0 +1,88 @@
+/* Course Data */
+/* Table: MYRXDATA */
+/* Database: Oracle */
+DATEKEY   NDC_KEY     COPAY_AMT
+--------- ----------- --------- 
+01-JAN-05 11111111111 5.12      
+01-FEB-05 22222222222 10.24 
+
+/* Table: DATEDIMENSION */
+/* Database: Oracle */
+DATEKEY                   
+--------- 
+01-JAN-05 
+01-FEB-05 
+01-MAR-05 
+
+/* Course Data */
+/* Table: MYRXDATA */
+/* Database: SQL Server */
+DATEKEY   NDC_KEY     COPAY_AMT
+--------- ----------- --------- 
+01-JAN-05 11111111111 5.12      
+01-FEB-05 22222222222 10.24 
+
+/* Table: DATEDIMENSION */
+/* Database: SQL Server */
+DATEKEY                   
+--------- 
+01-JAN-05 
+01-FEB-05 
+01-MAR-05 
+
+/* CARTESIAN JOIN */
+DATEKEY   NDC_KEY     COPAY_AMT
+--------- ----------- --------- 
+01-JAN-05 11111111111 5.12      
+01-FEB-05 11111111111 5.12      
+01-MAR-05 11111111111 5.12      
+01-JAN-05 22222222222 10.24     
+01-FEB-05 22222222222 10.24     
+01-MAR-05 22222222222 10.24    
+
+/* INNER JOIN */
+DATEKEY   NDC_KEY     COPAY_AMT
+--------- ----------- --------- 
+01-JAN-05 11111111111 5.12      
+01-FEB-05 22222222222 10.24    
+
+/* LEFT JOIN */
+DATEKEY   NDC_KEY     COPAY_AMT
+--------- ----------- --------- 
+01-JAN-05 11111111111 5.12      
+01-FEB-05 22222222222 10.24    
+
+/* RIGHT JOIN */
+DATEKEY   NDC_KEY     COPAY_AMT
+--------- ----------- --------- 
+01-JAN-05 11111111111 5.12      
+01-FEB-05 22222222222 10.24     
+01-MAR-05                                    
+
+/* FULL JOIN */
+DATEKEY   NDC_KEY     COPAY_AMT 
+--------- ----------- --------- 
+01-JAN-05 11111111111 5.12      
+01-FEB-05 22222222222 10.24     
+01-MAR-05                      
+
+/* CARTESIAN PRODUCT/UNION ALL */
+DATEKEY   NDC_KEY     COPAY_AMT       
+--------- ----------- --------- 
+01-JAN-05 11111111111 5.12      
+01-FEB-05 11111111111           
+01-MAR-05 11111111111           
+01-JAN-05 22222222222           
+01-FEB-05 22222222222 10.24     
+01-MAR-05 22222222222    
+
+/* PARTITION BY/RIGHT OUTER JOIN */
+DATEKEY   NDC_KEY     COPAY_AMT       
+--------- ----------- --------- 
+01-JAN-05 11111111111 5.12      
+01-FEB-05 11111111111           
+01-MAR-05 11111111111           
+01-JAN-05 22222222222           
+01-FEB-05 22222222222 10.24     
+01-MAR-05 22222222222    
+

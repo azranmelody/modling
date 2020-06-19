@@ -1,0 +1,86 @@
+/* Course Data */
+/* Table: CHILDSTAT */
+/* Database: Oracle */
+FIRSTNAME  GENDER BIRTHDATE  HEIGHT  WEIGHT  
+---------  ------ ---------  ------  ------
+LAUREN     F      10-JUN-00  54      876     
+ROSEMARY   F      08-MAY-00  35      123     
+ALBERT     M      02-AUG-00  45      150     
+BUDDY      M      02-OCT-98  45      189     
+FARQUAR    M      05-NOV-98  76      198     
+SIMON      M      03-JAN-99  87      256     
+TOMMY      M      11-DEC-98  78      167 
+
+/* Table: CHANGES */
+/* Database: Oracle */
+FIRSTNAME GENDER BIRTHDATE HEIGHT WEIGHT
+--------- ------ --------- ------ ------
+BOB       M      12-JUN-1 55     125   
+LAUREN                            85                     
+
+/* Table: CHILDSTAT */
+/* Database: SQL Server */
+FIRSTNAME  GENDER BIRTHDATE  HEIGHT  WEIGHT  
+---------  ------ ---------  ------  ------
+LAUREN     F      10-JUN-00  54      876     
+ROSEMARY   F      08-MAY-00  35      123     
+ALBERT     M      02-AUG-00  45      150     
+BUDDY      M      02-OCT-98  45      189     
+FARQUAR    M      05-NOV-98  76      198     
+SIMON      M      03-JAN-99  87      256     
+TOMMY      M      11-DEC-98  78      167 
+
+/* Table: CHANGES */
+/* Database: SQL Server */
+FIRSTNAME GENDER BIRTHDATE HEIGHT WEIGHT
+--------- ------ --------- ------ ------
+BOB       M      12-JUN-1 55     125   
+LAUREN                            85                     
+
+/* Example: INSERT, UPDATE and DELETE */
+/* Results same for Oracle and SQL Server */
+FIRSTNAME GENDER BIRTHDATE HEIGHT WEIGHT 
+--------- ------ --------- ------ ------ 
+ROSEMARY  F      08-MAY-00 35     123    
+LAUREN    F      10-JUN-00 54     85     
+ALBERT    M      02-AUG-00 45     150    
+BUDDY     M      02-OCT-98 45     189    
+FARQUAR   M      05-NOV-98 76     198    
+TOMMY     M      11-DEC-98 78     167    
+BOB       M      12-JUN-10 55     125  
+
+
+/* Using MERGE - Oracle and SQL Server */
+FIRSTNAME GENDER BIRTHDATE HEIGHT WEIGHT 
+--------- ------ --------- ------ ------ 
+ROSEMARY  F      08-MAY-00 35     123    
+LAUREN    F      10-JUN-00 54     85     
+ALBERT    M      02-AUG-00 45     150    
+BUDDY     M      02-OCT-98 45     189    
+FARQUAR   M      05-NOV-98 76     198    
+TOMMY     M      11-DEC-98 78     167    
+SIMON     M      03-JAN-99 87     256    
+BOB       M      12-JUN-10 55     125    
+
+/* Additional Conditions using AND/WHERE */
+FIRSTNAME GENDER BIRTHDATE HEIGHT WEIGHT 
+--------- ------ --------- ------ ------ 
+ROSEMARY  F      08-MAY-00 35     123    
+LAUREN    F      10-JUN-00 54     85     
+ALBERT    M      02-AUG-00 45     150    
+BUDDY     M      02-OCT-98 45     189    
+FARQUAR   M      05-NOV-98 76     198    
+TOMMY     M      11-DEC-98 78     167    
+SIMON     M      03-JAN-99 87     256    
+BOB       M      12-JUN-10 55     125    
+
+/* Delete SIMON */
+FIRSTNAME GENDER BIRTHDATE HEIGHT WEIGHT 
+--------- ------ --------- ------ ------ 
+ROSEMARY  F      08-MAY-00 35     123    
+LAUREN    F      10-JUN-00 54     85     
+ALBERT    M      02-AUG-00 45     150    
+BUDDY     M      02-OCT-98 45     189    
+FARQUAR   M      05-NOV-98 76     198    
+TOMMY     M      11-DEC-98 78     167    
+BOB       M      12-JUN-10 55     125    

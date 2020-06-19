@@ -1,0 +1,122 @@
+/* Course Data */
+/* Table: NUMBERS */
+/* Database: Oracle */
+NUM
+---
+1
+2
+3
+4
+
+/* Table: FAMILY */
+/* Database: Oracle */
+CHILD_KEY     PARENT_KEY   
+------------- -------------
+GRANDPARENTS               
+PARENTS       GRANDPARENTS 
+CHILD-1       PARENTS      
+CHILD-2       PARENTS  
+
+/* Table: COMPANY */
+/* Database: Oracle */
+EMPLOYEE_ID EMPLOYEE_NAME MANAGER_ID SALARY 
+----------- ------------- ---------- ------ 
+1           FRED                     100000 
+2           BARNEY        1          50000  
+3           WILMA         1          50000  
+4           BETTY         3          40000  
+5           PEBBLES       3          40000  
+6           BAM-BAM       4          20000  
+7           DINO          4          20000  
+8           HOPPY         4          40000  
+
+/* Course Data */
+/* Table: NUMBERS */
+/* Database: SQL Server */
+NUM
+---
+1
+2
+3
+4
+
+/* Table: FAMILY */
+/* Database: SQL Server */
+CHILD_KEY     PARENT_KEY   
+------------- -------------
+GRANDPARENTS               
+PARENTS       GRANDPARENTS 
+CHILD-1       PARENTS      
+CHILD-2       PARENTS  
+
+/* Table: COMPANY */
+/* Database: SQL Server */
+EMPLOYEE_ID EMPLOYEE_NAME MANAGER_ID SALARY 
+----------- ------------- ---------- ------ 
+1           FRED                     100000 
+2           BARNEY        1          50000  
+3           WILMA         1          50000  
+4           BETTY         3          40000  
+5           PEBBLES       3          40000  
+6           BAM-BAM       4          20000  
+7           DINO          4          20000  
+8           HOPPY         4          40000  
+
+
+/* Example #1 */
+ITERATION RUNNING_FACTORIAL 
+--------- -----------------
+1         1                 
+2         2                 
+3         6                 
+4         24 
+
+/* Example #2 */
+CK           PK           LVL 
+------------ ------------ ---
+GRANDPARENTS              0   
+PARENTS      GRANDPARENTS 1   
+CHILD-1      PARENTS      2   
+CHILD-2      PARENTS      2 
+
+/* Example #3 */
+EMPID  ENAME      MGRID  LVL 
+------ ---------- -----  ---
+4      BETTY      3      0   
+5      PEBBLES    3      0   
+6      BAM-BAM    4      1   
+7      DINO       4      1   
+8      HOPPY      4      1 
+
+EMPID  ENAME      MGRID  LVL MGR_NAME   
+------ ---------- -----  --- --------
+4      BETTY      3      0   WILMA
+5      PEBBLES    3      0   WILMA
+6      BAM-BAM    4      1   BETTY      
+7      DINO       4      1   BETTY      
+8      HOPPY      4      1   BETTY 
+
+/* Example #4 */
+LVL CK PK HIER                      ORDR 
+--- -- -- ------------------------- ----
+0   1     FRED                      1    
+1   2  1  FRED/BARNEY               2    
+1   3  1  FRED/WILMA                3    
+2   4  3  FRED/WILMA/BETTY          4    
+2   5  3  FRED/WILMA/PEBBLES        5    
+3   6  4  FRED/WILMA/BETTY/BAM-BAM  6    
+3   7  4  FRED/WILMA/BETTY/DINO     7    
+3   8  4  FRED/WILMA/BETTY/HOPPY    8 
+
+/* Example #5 */
+EMPID  ENAME    MGRID  LVL  SAL     IS_CYCLE 
+------ -------- -----  ---  ------- --------
+1      FRED            0    100000  N        
+2      BARNEY   1      1    50000   N        
+3      WILMA    1      1    50000   N        
+4      BETTY    3      2    40000   N        
+5      PEBBLES  3      2    40000   N        
+6      BAM-BAM  4      3    20000   N        
+7      DINO     4      3    20000   N        
+8      HOPPY    4      3    40000   Y 
+
