@@ -1,0 +1,7 @@
+part_of_speech_counter
+number_of_numbers
+number_of_words
+length_of_longest_word
+word2vec_mean_of_question
+counter_question_words
+th3_biggest_tfidf

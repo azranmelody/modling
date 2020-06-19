@@ -1,0 +1,33 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label="BMI <= 0.494\ngini = 0.807\nsamples = 41566\nvalue = [4375, 4625, 711, 983, 3864, 7901, 5595, 13512]", fillcolor="#fbdee7"] ;
+1 [label="Medical_History_23 <= 2.0\ngini = 0.72\nsamples = 26635\nvalue = [2306, 2063, 330, 809, 1104, 4037, 3373, 12613]", fillcolor="#f5b4c9"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Product_Info_4 <= 0.072\ngini = 0.818\nsamples = 4478\nvalue = [757, 702, 74, 93, 308, 818, 1263, 463]", fillcolor="#fae7fc"] ;
+1 -> 2 ;
+3 [label="gini = 0.657\nsamples = 292\nvalue = [63, 69, 18, 0, 142, 0, 0, 0]", fillcolor="#bedff6"] ;
+2 -> 3 ;
+4 [label="gini = 0.806\nsamples = 4186\nvalue = [694, 633, 56, 93, 166, 818, 1263, 463]", fillcolor="#fae5fc"] ;
+2 -> 4 ;
+5 [label="Medical_History_4 <= 1.5\ngini = 0.658\nsamples = 22157\nvalue = [1549, 1361, 256, 716, 796, 3219, 2110, 12150]", fillcolor="#f3a2bd"] ;
+1 -> 5 ;
+6 [label="gini = 0.802\nsamples = 6420\nvalue = [639, 503, 237, 635, 227, 1891, 511, 1777]", fillcolor="#fbfafe"] ;
+5 -> 6 ;
+7 [label="gini = 0.54\nsamples = 15737\nvalue = [910, 858, 19, 81, 569, 1328, 1599, 10373]", fillcolor="#ef84a7"] ;
+5 -> 7 ;
+8 [label="BMI <= 0.615\ngini = 0.824\nsamples = 14931\nvalue = [2069, 2562, 381, 174, 2760, 3864, 2222, 899]", fillcolor="#f0edfd"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="Product_Info_4 <= 0.055\ngini = 0.809\nsamples = 10155\nvalue = [1202, 1222, 235, 173, 1140, 3152, 2148, 883]", fillcolor="#eae6fc"] ;
+8 -> 9 ;
+10 [label="gini = 0.626\nsamples = 481\nvalue = [100, 88, 33, 0, 260, 0, 0, 0]", fillcolor="#acd6f4"] ;
+9 -> 10 ;
+11 [label="gini = 0.8\nsamples = 9674\nvalue = [1102, 1134, 202, 173, 880, 3152, 2148, 883]", fillcolor="#e8e5fc"] ;
+9 -> 11 ;
+12 [label="BMI <= 0.746\ngini = 0.75\nsamples = 4776\nvalue = [867, 1340, 146, 1, 1620, 712, 74, 16]", fillcolor="#eff7fd"] ;
+8 -> 12 ;
+13 [label="gini = 0.745\nsamples = 3497\nvalue = [558, 687, 132, 1, 1372, 659, 73, 15]", fillcolor="#cfe7f9"] ;
+12 -> 13 ;
+14 [label="gini = 0.642\nsamples = 1279\nvalue = [309, 653, 14, 0, 248, 53, 1, 1]", fillcolor="#ebf6b9"] ;
+12 -> 14 ;
+}
