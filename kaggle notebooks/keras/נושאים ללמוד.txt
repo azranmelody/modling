@@ -1,0 +1,7 @@
+נקודות לא סגורות:
+
+1. CNN - משמעות,פילטרים
+2. BATCH NORMALIZTION
+3. מציאת אוביקט בתמונה
+MAXPOOLING
+LOGGER
